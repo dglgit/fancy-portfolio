@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { HealthResponse } from '../types/bio-rag';
 
-const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'http://localhost:8000';
+const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'https://transstellar-interweavingly-karisa.ngrok-free.app';
 
 export const useBioRagHealth = () => {
   const [health, setHealth] = useState<HealthResponse | null>(null);

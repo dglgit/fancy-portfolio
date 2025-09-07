@@ -6,7 +6,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from '../portfolio.module.css';
-
 interface ProjectImage {
   src: string;
   alt: string;
@@ -109,7 +108,7 @@ const projects: Project[] = [
     description: "I built a RAG pipeline for biology using LangChain and Google Gemini. It uses the textbooks most recommended for the USA Biology Olympiad for its knowledge abse. It can answer questions about biology and cite sources. It currently runs as a self-contained microservice.",
     technologies: ["python", "LangChain", "Google Gemini","Large Language Models"],
     githubUrl: "https://github.com/dglgit/bio-rag",
-    liveUrl: "TBD",
+    liveUrl: "https://fancy-portfolio-88xz.vercel.app/bio-rag",
     youtubeUrl: "",
     images: []
   },
