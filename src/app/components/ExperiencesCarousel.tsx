@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Slider from 'react-slick';
 import Image from 'next/image';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from '../portfolio.module.css';
@@ -215,11 +215,12 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
                 {experience.images.map((image, index) => (
                   <div key={index} className="relative group">
                     <div className="relative h-48 rounded-lg overflow-hidden border border-gray-300 bg-gray-100">
-                      <img
+                      <Image
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-contain"
-                        onError={(e) => console.error('Image failed to load:', image.src)}
+                        fill
+                        className="object-contain"
+                        onError={() => console.error('Image failed to load:', image.src)}
                         onLoad={() => console.log('Image loaded successfully:', image.src)}
                       />
                       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-center justify-center">

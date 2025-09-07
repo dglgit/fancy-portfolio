@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from 'react';
-import { QueryRequest, QueryResponse, QueryState, ApiError } from '../types/bio-rag';
+import { QueryResponse, QueryState, ApiError } from '../types/bio-rag';
 
 const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'http://localhost:8000';
 

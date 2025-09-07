@@ -20,7 +20,7 @@ export const useBioRagHealth = () => {
         } else {
           setError('Health check failed');
         }
-      } catch (err) {
+      } catch {
         setError('Unable to connect to API');
       } finally {
         setLoading(false);
