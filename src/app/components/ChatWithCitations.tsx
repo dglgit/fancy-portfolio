@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export function ChatWithCitations() {
   const [query, setQuery] = useState("");
-  const [ans, setAns] = useState<{ answer: string; citationMap: Record<number,string> }>(null);
+  const [ans, setAns] = useState<{ answer: string; citationMap: Record<number,string> } | null>(null);
   const [showCits, setShowCits] = useState(false);
   const [loading, setLoading] = useState(false);
 
