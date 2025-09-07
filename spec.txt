@@ -1,0 +1,13 @@
+Pages currently:
+About me containing my name, cards with experiences and projects, contact information, etc. 
+Blog page(s) where I yap about stuff to show I am still active
+
+Project specific pages:
+- webcompute page where people are forced to test prime numbers 
+- Hallucinate digit page where people can generate hallucinated digits. maybe upgrade to something else 
+- submit protein to melt 
+- chatbot?
+- protein ligand separator 
+    - find heteroatoms and connect records related to them and return them to user 
+- lora trainer would be funny 
+- 

@@ -1,0 +1,178 @@
+/* Portfolio page specific styles */
+.portfolioContainer {
+  min-height: 100vh;
+  /*background: linear-gradient(to bottom right, #f8fafc, #0d0d0d) !important;*/
+  background: #0d0d0d !important;
+}
+
+.dark .portfolioContainer {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b) !important;
+}
+
+/* Custom carousel styles */
+.slickNext {
+  right: -20px !important;
+  z-index: 10 !important;
+}
+
+.slickPrev {
+  left: -20px !important;
+  z-index: 10 !important;
+}
+
+.slickNext,
+.slickPrev {
+  width: 40px !important;
+  height: 40px !important;
+  background: rgba(59, 130, 246, 0.9) !important;
+  border-radius: 50% !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.slickNext:hover,
+.slickPrev:hover {
+  background: rgba(59, 130, 246, 1) !important;
+}
+
+.slickNext:before,
+.slickPrev:before {
+  color: white !important;
+  font-size: 20px !important;
+  opacity: 1 !important;
+}
+
+.slickDots {
+  bottom: -25px !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.slickDots li {
+  margin: 0 4px !important;
+  display: inline-block !important;
+}
+
+.slickDots li button {
+  border: none !important;
+  background: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  display: block !important;
+  width: 10px !important;
+  height: 10px !important;
+  padding: 5px !important;
+  cursor: pointer !important;
+  border-radius: 50% !important;
+  background-color: #cbd5e1 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.slickDots li.slickActive button {
+  background-color: #3b82f6 !important;
+}
+
+.slickDots li button:before {
+  display: none !important;
+}
+
+/* Project and Experience card carousel styles */
+.projectImageSlider .slickSlide,
+.experienceImageSlider .slickSlide {
+  padding: 0 10px;
+}
+
+.projectImageSlider .slickDots,
+.experienceImageSlider .slickDots {
+  bottom: -20px !important;
+}
+
+/* Main carousel styles */
+.projectsCarousel .slickSlide,
+.experiencesCarousel .slickSlide {
+  padding: 0 10px;
+}
+
+.projectsCarousel .slickDots,
+.experiencesCarousel .slickDots {
+  bottom: -30px !important;
+}
+
+/* Hover effects for better UX */
+.slickSlide:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Ensure proper spacing in cards */
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slickNext {
+    right: -15px !important;
+  }
+  
+  .slickPrev {
+    left: -15px !important;
+  }
+  
+  .slickNext,
+  .slickPrev {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .slickNext:before,
+  .slickPrev:before {
+    font-size: 16px !important;
+  }
+  
+  .slickDots {
+    bottom: -20px !important;
+  }
+  
+  .slickDots li button {
+    width: 8px !important;
+    height: 8px !important;
+    padding: 4px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .slickNext {
+    right: -10px !important;
+  }
+  
+  .slickPrev {
+    left: -10px !important;
+  }
+  
+  .slickNext,
+  .slickPrev {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  .slickNext:before,
+  .slickPrev:before {
+    font-size: 14px !important;
+  }
+  
+  .slickDots {
+    bottom: -15px !important;
+  }
+  
+  .slickDots li button {
+    width: 6px !important;
+    height: 6px !important;
+    padding: 3px !important;
+  }
+} 

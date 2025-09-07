@@ -1,0 +1,103 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Set a fixed width for the card */
+  margin-left: auto;
+  margin-right: auto;
+  color:black;
+}
+
+
+.ExperiencesTrigger {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+}
+
+.ExperiencesTrigger:hover {
+  background-color: #e0e0e0;
+}
+
+.ExperiencesContent {
+
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.ExperiencesContent[data-state='open'] {
+  animation: slideDown 300ms ease-out;
+}
+
+.ExperiencesContent[data-state='closed'] {
+  animation: slideUp 300ms ease-out;
+  height: 0;
+  border:0;
+  overflow: hidden;
+}
+.ProjectsContent[data-state='open'] {
+    animation: slideDown 300ms ease-out;
+}
+  
+.ProjectsContent[data-state='closed'] {
+    animation: slideUp 300ms ease-out;
+    height: 0;
+    border:0;
+    overflow: hidden;
+}
+@keyframes slideDown {
+	from {
+		height: 0;
+	}
+	to {
+		height: var(--radix-collapsible-content-height);
+	}
+}
+
+@keyframes slideUp {
+	from {
+		height: var(--radix-collapsible-content-height);
+	}
+	to {
+		height: 0;
+	}
+}
+.carouselContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carouselItem {
+  flex: none;
+  width: 300px;
+  margin-right: 10px;
+  scroll-snap-align: start;
+}
+
+.carouselItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.singleCardCarouselContainer {
+    width:90%;
+    position:relative;
+    left:50px;
+}
+
+.slick-prev {
+  left: 25px; /* Adjusted left position */
+}
+
+.slick-next {
+  right: 0px !important; /* Adjusted right position */
+}

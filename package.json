@@ -3,25 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --hostname 0.0.0.0",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --hostname 0.0.0.0",
     "lint": "next lint"
   },
   "dependencies": {
+    "@langchain/community": "^0.3.49",
+    "@langchain/google-genai": "^0.2.16",
+    "@radix-ui/react-collapsible": "^1.1.11",
+    "@xenova/transformers": "^2.17.2",
+    "next": "15.3.5",
+    "pickleparser": "^0.2.1",
+    "radix-ui": "^1.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.5"
+    "react-multi-carousel": "^2.8.6",
+    "react-slick": "^0.30.3",
+    "sbd": "^1.0.19",
+    "slick-carousel": "^1.8.1",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@types/react-slick": "^0.23.13",
+    "@types/sbd": "^1.0.5",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
