@@ -13,7 +13,11 @@ export const useBioRagHealth = () => {
   useEffect(() => {
     const checkHealth = async () => {
       try {
-        const response = await fetch(`${API_BASE}/health`);
+        const response = await fetch(`${API_BASE}/health`, {
+          headers: {
+            'ngrok-skip-browser-warning': 'yeet', // The value can be anything.
+          },
+        });
         if (response.ok) {
           const data = await response.json();
           setHealth(data);

@@ -18,7 +18,7 @@ export const useBioRag = () => {
     try {
       const response = await fetch(`${API_BASE}/query`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' , 'ngrok-skip-browser-warning': 'yeet'},
         body: JSON.stringify({ question })
       });
 
