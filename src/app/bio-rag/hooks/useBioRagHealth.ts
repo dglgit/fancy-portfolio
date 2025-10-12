@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { HealthResponse } from '../types/bio-rag';
 
-const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'https://transstellar-interweavingly-karisa.ngrok-free.app';
-
+//const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'https://bio-rag-api.icycoast-547e95ed.westus2.azurecontainerapps.io';
+const API_BASE = 'https://bio-rag-api.icycoast-547e95ed.westus2.azurecontainerapps.io';
 export const useBioRagHealth = () => {
   const [health, setHealth] = useState<HealthResponse | null>(null);
   const [loading, setLoading] = useState(true);
@@ -15,7 +15,7 @@ export const useBioRagHealth = () => {
       try {
         const response = await fetch(`${API_BASE}/health`, {
           headers: {
-            'ngrok-skip-browser-warning': 'yeet', // The value can be anything.
+            'ngrok-skip-browser-warning': 't', // The value can be anything.
           },
         });
         if (response.ok) {

@@ -4,7 +4,8 @@ import { useState, useCallback } from 'react';
 import { QueryResponse, QueryState, ApiError } from '../types/bio-rag';
 
 //const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'https://transstellar-interweavingly-karisa.ngrok-free.app';
-const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'https://bio-rag-api.icycoast-547e95ed.westus2.azurecontainerapps.io/';
+//const API_BASE = process.env.NEXT_PUBLIC_BIO_RAG_API_URL || 'https://bio-rag-api.icycoast-547e95ed.westus2.azurecontainerapps.io';
+const API_BASE = 'https://bio-rag-api.icycoast-547e95ed.westus2.azurecontainerapps.io';
 export const useBioRag = () => {
   const [state, setState] = useState<QueryState>({
     loading: false,
