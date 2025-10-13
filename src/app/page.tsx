@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div className="text-slate-600 dark:text-slate-300 mb-8">
             <a
-              href="/Douglas_Lin_resume.pdf"
+              href="/Douglas_Lin_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"

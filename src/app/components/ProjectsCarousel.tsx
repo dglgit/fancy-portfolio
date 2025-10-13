@@ -25,6 +25,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 3,
+    title: "Biology RAG",
+    description: "I built a RAG pipeline for biology using LangChain and Google Gemini. It uses the textbooks most recommended for the USA Biology Olympiad for its knowledge abse. It can answer questions about biology and cite sources. It currently runs as a self-contained microservice.",
+    technologies: ["python", "LangChain", "Google Gemini","Large Language Models"],
+    githubUrl: "https://github.com/dglgit/bio-rag",
+    liveUrl: "https://fancy-portfolio-88xz.vercel.app/bio-rag",
+    youtubeUrl: "",
+    images: []
+  },
+  {
     id: 5,
     title: "Multicellular simulator",
     description: "Python + Numpy + Numba based implementation of the Gillespie algorithm for stochastic chemical kinetics. I used it to extend the capabilities of Virtual Cell to simulate multicellular systems.",
@@ -101,16 +111,6 @@ const projects: Project[] = [
         description: "Membrane simulation screenshot"
       },
     ]
-  },
-  {
-    id: 3,
-    title: "Biology RAG",
-    description: "I built a RAG pipeline for biology using LangChain and Google Gemini. It uses the textbooks most recommended for the USA Biology Olympiad for its knowledge abse. It can answer questions about biology and cite sources. It currently runs as a self-contained microservice.",
-    technologies: ["python", "LangChain", "Google Gemini","Large Language Models"],
-    githubUrl: "https://github.com/dglgit/bio-rag",
-    liveUrl: "https://fancy-portfolio-88xz.vercel.app/bio-rag",
-    youtubeUrl: "",
-    images: []
   },
   
 ];
