@@ -37,10 +37,10 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Multicellular simulator",
-    description: "Python + Numpy + Numba based implementation of the Gillespie algorithm for stochastic chemical kinetics. I used it to extend the capabilities of Virtual Cell to simulate multicellular systems.",
+    description: "Python + Numpy + Numba based implementation of the Gillespie algorithm for stochastic chemical kinetics. I used it to extend the capabilities of Virtual Cell to simulate multicellular systems. \n \n [Read the paper here](https://www.frontiersin.org/journals/molecular-biosciences/articles/10.3389/fmolb.2025.1595363)",
     technologies: ["python", "Numpy", "Numba"],
     githubUrl: "https://github.com/dglgit/multicellular-simulator",
-    liveUrl: "https://www.frontiersin.org/journals/molecular-biosciences/articles/10.3389/fmolb.2025.1595363",
+    liveUrl: "",
     youtubeUrl: "",
     images: [
       {
