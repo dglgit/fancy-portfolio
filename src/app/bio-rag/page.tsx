@@ -52,7 +52,7 @@ export default function BioRagPage() {
           </div>
           
           <p className="text-black mb-6">
-            Ask questions about biology using our multimodal RAG system. 
+            Ask fundamental questions about biology using our RAG system. 
             Get answers with detailed citations from multiple textbooks.
           </p>
 
