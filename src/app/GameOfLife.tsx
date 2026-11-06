@@ -7,7 +7,7 @@ const TICK_MS = 160;
 const COLOR = "rgba(0, 0, 0, 0.07)";
 const GLIDER = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2]];
 
-// Faint Conway's Game of Life behind the page. Moving the mouse sprinkles cells; clicking drops a glider.
+// Faint Conway's Game of Life behind the page. Moving the mouse seeds a cell per tick; clicking drops a glider.
 export default function GameOfLife() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -44,6 +44,10 @@ export default function GameOfLife() {
     };
 
     const step = () => {
+      if (pointer) {
+        set(pointer[0], pointer[1]);
+        pointer = null;
+      }
       let alive = 0;
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
@@ -67,9 +71,10 @@ export default function GameOfLife() {
     };
     const spawnGlider = (x: number, y: number) => GLIDER.forEach(([dx, dy]) => set(x + dx, y + dy));
 
+    // Remember the latest pointer position; step() drops at most one cell there per tick.
+    let pointer: [number, number] | null = null;
     const onMove = (e: PointerEvent) => {
-      const x = e.clientX / CELL, y = e.clientY / CELL;
-      for (let i = 0; i < 3; i++) set(x + (Math.random() * 4 - 2), y + (Math.random() * 4 - 2));
+      pointer = [e.clientX / CELL, e.clientY / CELL];
     };
     const onClick = (e: MouseEvent) => spawnGlider(e.clientX / CELL, e.clientY / CELL);
 
